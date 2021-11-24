@@ -23,9 +23,8 @@ this.props.dispatch(logOut())
   const { dispatch } = this.props;
   dispatch(changeUser(event.currentTarget.value));
 
- // Once the user logs in, The Home page is shown.
-  document.getElementById("Home").click();
-} 
+}
+ 
 render() {
 return (
 <div>

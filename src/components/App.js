@@ -15,7 +15,7 @@ class App extends React.Component {
 static propTypes = {
 user: PropTypes.string
 }
- 
+
  componentDidMount () {
     const { dispatch } = this.props
     dispatch(populate())
@@ -38,7 +38,7 @@ user: PropTypes.string
 </Route>
 <Route exact path="/leaderboard" element={<Leaderboard />}>
 </Route>
-<Route exact path="/add" element={<Add />}>
+<Route exact path="/add" element={<Add func={this.goHome} />}>
 </Route>
 <Route path="/questions/:question_id" element={<Poll />}>
 

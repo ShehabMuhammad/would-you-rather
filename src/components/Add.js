@@ -2,46 +2,47 @@ import React from 'react'
 import {handleAddQuestion } from '../actions/questions'
 import {connect} from 'react-redux'
 import PropTypes from 'prop-types'
+import { useNavigate } from 'react-router-dom';
 
-class Add extends React.Component {
 
-static propTypes = {
-currentUser: PropTypes.string
-}
-
+function Add(props) {
+let optOne, optTwo;
+let nav = useNavigate();
   
-  addQuestion = (e) => {
+  let addQuestion = (e) => {
+
      e.preventDefault();
-     const { currentUser } = this.props;
+     const { currentUser } = props;
  
     if(!currentUser || 
-      this.optOne.value.trim() === '' ||
-      this.optTwo.value.trim() === '' ){ return;}
+      optOne.value.trim() === '' ||
+      optTwo.value.trim() === '' ){ return;}
 
-    this.props.dispatch(handleAddQuestion(
+    props.dispatch(handleAddQuestion(
 
-      {optionOneText: this.optOne.value, 
+      {optionOneText: optOne.value, 
 
-       optionTwoText: this.optTwo.value, 
+       optionTwoText: optTwo.value, 
 
        author: currentUser },
 
-      () => {this.optOne.value = ''; this.optTwo.value = ''; 
-   document.getElementById("Home").click();
-/* window.history.replaceState({}, "Hakuna", "/"); */}
-    ))
+
+      () => {/* ~~~\/|^_^|\/ ~~~ */ } ));
+ 
+  nav("/");
+    
   }
 
-render() {
+
 
 return (
  <div>
 <center>
   <h2> Would you Rather </h2>
-  <form onSubmit={(event)=>{this.addQuestion(event)}} action="/">
-  <input type="text" id="optionOne" ref={one => {this.optOne = one}} placeholder="optionOne" />   &nbsp;  &nbsp; 
-  <input type="text" id="optionTwo" ref={two => {this.optTwo = two}} placeholder="optionTwo" />
-<p>{this.props.Questions} </p>
+  <form onSubmit={(event)=>{addQuestion(event)}} action="/">
+  <input type="text" id="optionOne" ref={one => {optOne = one}} placeholder="optionOne" />   &nbsp;  &nbsp; 
+  <input type="text" id="optionTwo" ref={two => {optTwo = two}} placeholder="optionTwo" />
+<p>{props.Questions} </p>
   <button  > Add Question
 </button>
 </form>
@@ -51,9 +52,15 @@ return (
 
 }
 
+
+
+Add.propTypes = {
+currentUser: PropTypes.string
 }
+
 const mapStateToProps = (state, ownProps) => ({
- currentUser: state.user
+ currentUser: state.user,
+ goHome: state.goHome
 });
 
 export default (connect(mapStateToProps)(Add))
