@@ -3,7 +3,6 @@
  ** Would-You-Rather is a project for the FWD web development udacity nanodegree , It's meant to fulfill the criteria imposed by the fwd course.**
 
 # Table of contents
-- [landingPage](#landingPage)
 - [description](#description)
 - [Table of contents](#table-of-contents)
 - [technologies](#technologies)
