@@ -14,7 +14,7 @@ let users = {
   tylermcginnis: {
     id: 'tylermcginnis',
     name: 'Tyler McGinnis',
-    avatarURL: 'https://images.freeimages.com/images/large-previews/389/mitze-1380778.jpg',
+    avatarURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Footprints_in_the_snow%2C_Munich_2021_01.jpg/640px-Footprints_in_the_snow%2C_Munich_2021_01.jpg',
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -24,7 +24,7 @@ let users = {
   johndoe: {
     id: 'johndoe',
     name: 'John Doe',
-    avatarURL: 'https://images.freeimages.com/images/large-previews/389/mitze-1380778.jpg',
+    avatarURL: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Viru_Bog%2C_Parque_Nacional_Lahemaa%2C_Estonia%2C_2012-08-12%2C_DD_60.JPG/640px-Viru_Bog%2C_Parque_Nacional_Lahemaa%2C_Estonia%2C_2012-08-12%2C_DD_60.JPG',
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
